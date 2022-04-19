@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const CountButton = (props) => {
     const [count, setCount] = useState(0)
@@ -6,6 +6,10 @@ const CountButton = (props) => {
     const handleClick = () => {
        setCount(count + props.increment)
     }
+
+    useEffect(() =>{
+
+    }, [])
     return (
         <div>
             <button onClick={handleClick}>+{props.increment}</button>

@@ -2,7 +2,7 @@ import { useState } from "react"
 
 const SearchBar = (props) => {
     const [search, setSearch] = useState('')
-    const products =[ 'tooth brush', 'mouth wasth', 'teeth']
+    
 
     const handleInputChange = (e) => {
         setSearch(e.target.value)
@@ -16,7 +16,7 @@ const SearchBar = (props) => {
 
     const shouldDisplayButton = search.length > 0
 
-    const filterProducts = products.filter((product) =>{
+    const filterProducts = props.products.filter((product) =>{
         return product.includes(search)
     })
 
